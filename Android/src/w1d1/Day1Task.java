@@ -1,10 +1,11 @@
+package w1d1;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
 /*
- * Day 2 Tasks:
+ * Day 1 Tasks:
  * TASK 1 - Count the amount of words in a file..
  * TASK 2 - Count the amount of sentences in a file..
  * TASK 3 - Caesar cipher - shift all letters n amount of letters forwards or backwards..
@@ -13,7 +14,7 @@ import java.io.IOException;
  * 
  */
 
-public class Day2Task{
+public class Day1Task{
 	
 	public static void main(String [] args) throws IOException, InterruptedException{
 		
