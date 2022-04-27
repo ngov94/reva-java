@@ -5,7 +5,7 @@ public class Driver {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		char[] myArray = new char[5];
+		char[] myArray = new char[7];
 		myArray[0] = 't';
 		myArray[1] = 'r';
 		myArray[2] = 'u';
@@ -20,15 +20,20 @@ public class Driver {
 		Word word2 = new Word(myArray, 5);
 		Word word3 = new Word(myArray2);
 		Word word4 = new Word(aString.toCharArray());
+		 
 		
-		System.out.println(word3);
-		boolean truckContainsZ = word3.contains('z');
+		System.out.println(word3); boolean truckContainsZ = word3.contains('z');
 		System.out.println(truckContainsZ);
-		
 		System.out.println(word2);
-		
 		System.out.println(word4.substring(5));
 		
+		//TASK
+		System.out.println("\n\n\tappendChar Method"); 
+		
+		System.out.println(word3+"\nLength of Array:"+word3.getCharArray().length+" Length of Word:"+word3.getLength());
+		word3.appendChar('X');
+		System.out.println(word3+"\nLength of Array:"+word3.getCharArray().length+" Length of Word:"+word3.getLength());
+		 
 	}
 
 }

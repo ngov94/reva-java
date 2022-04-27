@@ -131,7 +131,7 @@ public class Word {
 	}
 	//a method that replaces a character with another at a given index
 	public void replace(int index, char a) {
-		charArray[index] =a;
+		charArray[index] = a;
 	}
 	
 	public char[] getCharArray() {
@@ -173,5 +173,24 @@ public class Word {
 		}
 		
 		return new Word(tempArray);
+	}
+	
+	//TASK
+	//a method that appends a single character, but when the array runs out of space double the size
+	public void appendChar(char a) {
+		if (charArray.length > length) {
+			this.replace(length, a);
+			this.length++;
+		}
+		else {
+			char[] tempArray = new char[charArray.length*2];
+			for(int i = 0;i < length; i++) {
+				tempArray[i] = charArray[i];
+			}
+			
+			this.charArray = tempArray;
+			this.replace(length, a);
+			this.length++;
+		}
 	}
 }
