@@ -6,12 +6,21 @@ public class Word {
 //	they have independent states and behavior
 	
 	
-	//access modifier: private, public, protected, defaults
+	//access modifier
+	//4 in java: private, public, protected, defaults
+	//access modifiers influence whether the variable, method, object,
+	//class can be accessed outside of its object
+	//this relates to the oop concept of encapsulation
+	
 	private char[] charArray;
 	private int length;
 	
 	public Word() {
-		// do something here.. (usually instantiate variables
+		
+		char[] cArray = {'d','e','f','a','u','l','t'};
+		charArray = cArray;
+		length = 7;
+		
 	}
 	
 	public Word(char[] charArray, int length) {
