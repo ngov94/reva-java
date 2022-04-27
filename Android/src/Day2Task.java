@@ -3,6 +3,16 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/*
+ * Day 2 Tasks:
+ * TASK 1 - Count the amount of words in a file..
+ * TASK 2 - Count the amount of sentences in a file..
+ * TASK 3 - Caesar cipher - shift all letters n amount of letters forwards or backwards..
+ * 
+ * @author Neena Govindhan
+ * 
+ */
+
 public class Day2Task{
 	
 	public static void main(String [] args) throws IOException, InterruptedException{
