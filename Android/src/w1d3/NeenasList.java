@@ -45,11 +45,19 @@ public class NeenasList<T> {
 	public void removeIndex(int n) {
 		ListNode<T> current = head;
 		ListNode<T> prev  = null;
-		for(int i = 0; i < n; i++) {
-			prev = current;
-			current = current.getNext();
+		
+		if (n != 0) {
+			for(int i = 0; i < n; i++) {
+				prev = current;
+				current = current.getNext();
+			}
+			prev.setNext(current.getNext());
+		}else {
+			head = current.getNext();
+			
 		}
-		prev.setNext(current.getNext());
+			
+		
 		//if nothing is pointing to an object in java anymore
 		//it is  removed from memory automatically
 		//this is called garbage collection in java
@@ -86,9 +94,9 @@ public class NeenasList<T> {
 	//TASK 2
 	//linked list contains
 	public boolean contains(T t) {
-		
 		ListNode<T> list = head;
-		while(list !=null) {
+		
+		while(list != null) {
 			if(list.getData().equals(t))
 				return true;
 			list = list.getNext();
@@ -99,13 +107,18 @@ public class NeenasList<T> {
 	
 	//TASK 3
 	//linked list .equals(another linked list)
-	public boolean equalList(ListNode<T> otherList) {
+	public boolean equalList(NeenasList<T> otherList) {
 		ListNode<T> list = head;
-		while( list!= null) {
-			
+		ListNode<T> oList = otherList.head;
+		
+		while(list != null || oList != null) {
+			if(!list.getData().equals(oList.getData())) 
+				return false;
+			list = list.getNext();
+			oList = oList.getNext();
 		}
 		
-		if (otherList != null)
+		if (oList != null || list != null)
 			return false;
 		
 		return true;

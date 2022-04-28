@@ -13,6 +13,7 @@ public class Driver {
 		Scanner in = new Scanner(System.in);
 		
 		NeenasList<Word> list = new NeenasList<Word>();
+		
 		boolean running = true;
 		
 		while(running) {
@@ -45,6 +46,18 @@ public class Driver {
 				Word w = new Word(input.toCharArray());
 				System.out.println(list.contains(w));
 				
+			}if(input.equals("compareList")) {//TASK 3
+				NeenasList<Word> compare = new NeenasList<Word>();
+				String dog = "dog";
+				String cat = "cat";
+				String mouse = "mouse";
+				compare.addToFront(new Word(dog.toCharArray()));
+				compare.addToFront(new Word(cat.toCharArray()));
+				compare.addToFront(new Word(mouse.toCharArray()));
+				
+				System.out.println(list.equalList(compare));
+				System.out.println(list);
+				System.out.println(compare);
 			}
 			
 		}
