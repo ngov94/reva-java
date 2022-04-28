@@ -29,20 +29,23 @@ public class StoryReader {
 			do{
 				int b = myFileReader.read();
 				char c = (char) b;
-				//if we have a space or newline, we create a new word, 
-				//add it to our array of words, and reset our buffer 
+				//if we have a space, newline or reached the end of the document, 
+				//we create a new word, add it to our array of words, 
+				//and reset our buffer 
 				if(c == ' ' || c == '\n' || b == -1) {
 					Word newWord = new Word(buffer, length);
 					wordsArray[numWord] = newWord;
 					numWord++;
 					length = 0;
 				}else {	
+					//add a character to buffer
 					buffer[length] = c;
 					length++;
 				}
 				
 				if(b == -1)
-					readingFile = false;		
+					readingFile = false;
+				
 			}while(readingFile);
 			
 			for(int i = 0; i < numWord; i++) {

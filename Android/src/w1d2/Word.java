@@ -133,7 +133,7 @@ public class Word {
 	public void replace(int index, char a) {
 		charArray[index] = a;
 	}
-	
+	//a methods to retrieve 
 	public char[] getCharArray() {
 		return charArray;
 	}
@@ -176,7 +176,7 @@ public class Word {
 	}
 	
 	//TASK
-	//a method that appends a single character, but when the array runs out of space double the size
+	//a method that appends a single character, but when the array runs out of space double the size of the array
 	public void appendChar(char a) {
 		if (charArray.length > length) {
 			this.replace(length, a);
