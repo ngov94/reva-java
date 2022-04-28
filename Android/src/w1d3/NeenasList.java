@@ -81,16 +81,34 @@ public class NeenasList<T> {
 		prev.setNext(newNode);
 	}
 	
+	
+	
 	//TASK 2
 	//linked list contains
 	public boolean contains(T t) {
-		return true;//CHANGE
+		
+		ListNode<T> list = head;
+		while(list !=null) {
+			if(list.getData().equals(t))
+				return true;
+			list = list.getNext();
+		}
+		
+		return false;
 	}
 	
 	//TASK 3
 	//linked list .equals(another linked list)
 	public boolean equalList(ListNode<T> otherList) {
-		return true;//CHANGE
+		ListNode<T> list = head;
+		while( list!= null) {
+			
+		}
+		
+		if (otherList != null)
+			return false;
+		
+		return true;
 	}
 	
 	

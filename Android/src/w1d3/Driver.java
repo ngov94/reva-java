@@ -40,6 +40,11 @@ public class Driver {
 				Word w = new Word(input.toCharArray());
 				list.addAtIndex(w,Integer.parseInt(input2));
 				System.out.println(list);
+			}else if(input.equals("contains")) {//TASK 2
+				input = in.nextLine();
+				Word w = new Word(input.toCharArray());
+				System.out.println(list.contains(w));
+				
 			}
 			
 		}
