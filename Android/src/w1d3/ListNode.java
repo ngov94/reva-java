@@ -5,8 +5,8 @@ public class ListNode<T> {
 	private T data;
 	private ListNode<T> next;
 
-	public ListNode(T w) {
-		data = w;
+	public ListNode(T t) {
+		data = t;
 	}
 	public T getData() {
 		return data;

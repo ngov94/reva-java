@@ -68,7 +68,8 @@ public class NeenasList<T> {
 	
 	//TASK 1
 	//linkedlist add at index
-	public void addAtIndex(ListNode<T> newNode, int index) {
+	public void addAtIndex(T t, int index) {
+		ListNode<T> newNode = new ListNode<T>(t);
 		ListNode<T> current = head;
 		ListNode<T> prev  = null;
 		for(int i = 0; i < index; i++) {

@@ -38,8 +38,7 @@ public class Driver {
 				input = in.nextLine();
 				String input2 = in.nextLine();
 				Word w = new Word(input.toCharArray());
-				ListNode<Word> l = new ListNode<Word>(w);
-				list.addAtIndex(l,Integer.parseInt(input2));
+				list.addAtIndex(w,Integer.parseInt(input2));
 				System.out.println(list);
 			}
 			
