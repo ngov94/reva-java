@@ -34,6 +34,13 @@ public class Driver {
 				input = in.nextLine();
 				list.removeIndex(Integer.parseInt(input));
 				System.out.println(list);
+			}else if(input.equals("addAtIndex")) {//TASK 1
+				input = in.nextLine();
+				String input2 = in.nextLine();
+				Word w = new Word(input.toCharArray());
+				ListNode<Word> l = new ListNode<Word>(w);
+				list.addAtIndex(l,Integer.parseInt(input2));
+				System.out.println(list);
 			}
 			
 		}

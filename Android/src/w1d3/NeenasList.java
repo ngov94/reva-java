@@ -66,4 +66,31 @@ public class NeenasList<T> {
 	}
 	
 	
+	//TASK 1
+	//linkedlist add at index
+	public void addAtIndex(ListNode<T> newNode, int index) {
+		ListNode<T> current = head;
+		ListNode<T> prev  = null;
+		for(int i = 0; i < index; i++) {
+			prev = current;
+			current = current.getNext();
+		}
+		
+		newNode.setNext(current);
+		prev.setNext(newNode);
+	}
+	
+	//TASK 2
+	//linked list contains
+	public boolean contains(T t) {
+		return true;//CHANGE
+	}
+	
+	//TASK 3
+	//linked list .equals(another linked list)
+	public boolean equalList(ListNode<T> otherList) {
+		return true;//CHANGE
+	}
+	
+	
 }
