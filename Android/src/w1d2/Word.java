@@ -68,7 +68,15 @@ public class Word {
 	}
 	
 	//a method that returns true if another word is equal to this word (word1.equals(word2))
-	public boolean equal(Word a) {
+	@Override
+	public boolean equals(Object o) {
+		if (o == this) 
+			return true;
+		
+		if(!(o instanceof Word))
+			return false;
+		
+		Word a = (Word) o;
 		
 		if (a.length != length)
 			return false;
