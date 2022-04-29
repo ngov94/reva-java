@@ -1,6 +1,6 @@
 package w1d2;
 
-public class Word {
+public class Word implements Comparable<Word> {
 //	think of objects as a custom type..
 //	objects are an instance of a class..
 //	they have independent states and behavior
@@ -91,7 +91,7 @@ public class Word {
 	}
 	
 	//a method that returns -1 if the word is before another lexigraphically (like in a dictionary), 0 if equal, 1 if after lexigraphically
-	public int order(Word a) {
+	public int compareTo(Word a) {
 		
 		if (length < a.length) {	
 			for(int i = 0; i < length; i++) {
